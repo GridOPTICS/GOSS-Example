@@ -1,0 +1,19 @@
+dependencies {
+    compile project(':goss-example-common')
+    compile "pnnl.goss:goss-core-server:${gossCoreVersion}"
+    compile "pnnl.goss:goss-core-client:${gossCoreVersion}"
+    compile "pnnl.goss:goss-core:${gossCoreVersion}"
+}
+
+jar{
+    manifest {
+
+        instruction 'Export-Package', 	'pnnl.goss.example.datamodel',
+                            'pnnl.goss.example.request',
+                            'pnnl.goss.example.response',
+                            'pnnl.goss.example'
+        instruction "Bundle-Activator", 'pnnl.goss.example.ExampleActivator'
+		
+
+    }
+}

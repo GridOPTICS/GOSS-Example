@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" name="@project.name@-@project.version@" >
+
+    <feature name="goss-example-feature" version="@project.version@" resolver="(obr)">
+        <feature version="@gossCoreVersion@">goss-core-feature</feature>
+        
+        <bundle dependency="true">mvn:pnnl.goss.example/goss-example-common/@project.version@</bundle>
+        <bundle dependency="true">mvn:pnnl.goss.example/goss-example-server/@project.version@</bundle>
+
+    </feature>
+</features>

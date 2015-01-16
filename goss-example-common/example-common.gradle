@@ -1,0 +1,12 @@
+dependencies {
+    compile "pnnl.goss:goss-core:${gossCoreVersion}"
+}
+
+jar{
+    manifest {
+        instruction 'Export-Package', 	'pnnl.goss.example.datamodel',
+                            'pnnl.goss.example.request',
+                            'pnnl.goss.example.response',
+                            'pnnl.goss.example.common'
+    }
+}
